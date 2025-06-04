@@ -24,7 +24,8 @@ blocks:
             - echo "Tests completed successfully!"
     dependencies: []
   - name: "\U0001F680 Deploy"
-    dependencies: []
+    dependencies:
+      - "\U0001F9EA Test"
     task:
       jobs:
         - name: "\U0001F4E6 Deploy to Production"
