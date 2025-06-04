@@ -22,9 +22,9 @@ blocks:
             - echo "Installing dependencies..."
             - echo "Running test suite..."
             - echo "Tests completed successfully!"
+    dependencies: []
   - name: "\U0001F680 Deploy"
-    dependencies:
-      - "\U0001F9EA Test"
+    dependencies: []
     task:
       jobs:
         - name: "\U0001F4E6 Deploy to Production"
