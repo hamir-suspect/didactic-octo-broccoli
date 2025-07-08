@@ -1,0 +1,28 @@
+version: v1.0
+name: Pipeline 2
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2004
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - echo "job 1"
+    dependencies: []
+  - name: 'Block #2'
+    dependencies: []
+    task:
+      jobs:
+        - name: Job ok
+          commands:
+            - exit 1
+  - name: 'Block #3'
+    dependencies: []
+    task:
+      jobs:
+        - name: Job not ok
+          commands:
+            - qweasd

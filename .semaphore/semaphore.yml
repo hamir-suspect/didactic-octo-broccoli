@@ -34,3 +34,7 @@ blocks:
             - echo "Running security checks..."
             - echo "Deploying to production..."
             - echo "Deployment completed successfully!"
+promotions:
+  - name: Promotion 1
+    pipeline_file: pipeline_2.yml
+    deployment_target: test
