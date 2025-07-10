@@ -43,6 +43,14 @@ blocks:
         - name: skipped
           commands:
             - echo "this is skipped block"
+  - name: 'Block #4'
+    dependencies:
+      - "\U0001F9EA Test"
+    task:
+      jobs:
+        - name: failing job
+          commands:
+            - exit 1
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_2.yml
